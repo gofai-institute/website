@@ -32,7 +32,7 @@ Each page carries a unique title/description, canonical URL, Open Graph and
 Twitter Card tags, and JSON-LD structured data (Organization + WebSite on the
 landing page; AboutPage on Mission; Person entries on People; Blog/WebPage on
 the rest). **All canonical and `og:url` values point at the current GitHub Pages
-URL (`https://gofai-institute.github.io/website/`)** — update them, plus
+URL (`https://insitute-of-gofai.github.io/website/`)** — update them, plus
 `sitemap.xml` and `robots.txt`, when the site moves to its standalone domain.
 
 ## Local preview
