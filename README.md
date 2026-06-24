@@ -12,14 +12,14 @@ A small static site — a landing page plus one page per section. No build tools
 no frameworks, no npm. The only external resources are Google Fonts (EB Garamond,
 Inter, JetBrains Mono).
 
-- `index.html` — landing page (hero, mission, research teaser, links out).
+- `index.html` — landing page (hero, mission with the three pillars, links out).
 - `research.html` — the three research pillars in full.
-- `people.html` — the people behind the institute.
-- `activity.html` — reading group, workshop, preprint, seminar series.
-- `blog.html` — essays and working notes.
+- `people.html` — the people behind the institute (with headshots in `images/`).
+- `blog.html` — placeholder posts (lorem ipsum) until real essays are published.
 - `support.html` — partnerships, grants, contact.
 - `style.css` — shared stylesheet (design tokens live in the `:root` block).
 - `nav.js` — shared mobile-nav toggle.
+- `images/` — headshots and other assets.
 - `_config.yml` — tells GitHub Pages to serve the raw HTML directly.
 - `README.md` — this file.
 

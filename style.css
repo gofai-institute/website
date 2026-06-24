@@ -273,10 +273,23 @@ p { margin: 0 0 1.3rem; }
 
 /* ---------- People ---------- */
 .person {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
   padding: 1.8rem 0;
   border-top: 1px solid var(--rule);
 }
 .person:last-child { border-bottom: 1px solid var(--rule); }
+.person-photo {
+  width: 104px;
+  height: 104px;
+  flex: 0 0 104px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid var(--rule);
+  background: var(--accent-soft);
+}
+.person-body { min-width: 0; }
 .person .name {
   font-family: 'EB Garamond', serif;
   font-weight: 500;
@@ -387,6 +400,7 @@ footer {
   .footer-inner { flex-direction: column; }
   .footer-meta { text-align: left; }
   .pillar-glyph { font-size: 5rem; }
+  .person-photo { width: 80px; height: 80px; flex-basis: 80px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
