@@ -304,6 +304,46 @@ p { margin: 0 0 1.3rem; }
   color: var(--accent);
 }
 
+/* ---------- Pillar index (condensed, landing) ---------- */
+.pillar-index { margin-bottom: 0.5rem; }
+.pillar-brief {
+  display: flex;
+  align-items: baseline;
+  gap: 1.1rem;
+  padding: 1.4rem 0;
+  border-top: 1px solid var(--rule);
+  color: var(--ink);
+}
+.pillar-brief:last-of-type { border-bottom: 1px solid var(--rule); }
+.pillar-brief:hover { text-decoration: none; }
+.pillar-brief-glyph {
+  flex: 0 0 1.5rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--accent);
+  text-align: center;
+}
+.pillar-brief-text { flex: 1 1 auto; min-width: 0; }
+.pillar-brief-label {
+  display: block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: var(--ink-light);
+  margin-bottom: 0.3rem;
+}
+.pillar-brief-head {
+  font-family: 'EB Garamond', serif;
+  font-weight: 500;
+  font-size: 1.3rem;
+  color: var(--ink);
+  transition: color 0.2s ease;
+}
+.pillar-brief:hover .pillar-brief-head { color: var(--accent); }
+.pillar-brief-arrow { align-self: center; color: var(--ink-light); transition: color 0.2s ease; }
+.pillar-brief:hover .pillar-brief-arrow { color: var(--accent); }
+
 /* ---------- People ---------- */
 .person {
   display: flex;
