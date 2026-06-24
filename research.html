@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Research — Institute of GOFAI</title>
+  <meta name="description" content="Three research pillars: symbolic checks on neural systems, logic as bedrock for LLM world models, and classical AI redesigned from first principles." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;1,400&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="nav-logo" href="index.html">Institute of GOFAI</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6" /><line x1="3" y1="12" x2="21" y2="12" /><line x1="3" y1="18" x2="21" y2="18" />
+        </svg>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="research.html" aria-current="page">Research</a></li>
+        <li><a href="people.html">People</a></li>
+        <li><a href="activity.html">Activity</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="support.html">Support</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="page-head">
+    <div class="wrap">
+      <p class="eyebrow">Research</p>
+      <h1>Three pillars of a machine-oriented programme</h1>
+      <p class="lede">What symbolic methods look like when they are designed for machine consumption rather than human readability.</p>
+    </div>
+  </header>
+
+  <section>
+    <div class="wrap">
+      <div class="pillar">
+        <span class="pillar-glyph" aria-hidden="true">&#8866;</span>
+        <p class="pillar-label">Pillar I · Constraining · Boosting · Auditing</p>
+        <h3>Symbolic checks on neural systems</h3>
+        <p>New-fashioned AI should be auditable by symbolic means. The central question is how to design interactive theorem provers (ITPs) that are LLM-friendly — and, more radically, what ITPs look like when they are designed for machines rather than for humans. Current tools such as Lean and Agda make many things implicit that could be made explicit; unlike human mathematicians, LLMs prefer explicitness, as any prompt engineer knows.</p>
+        <p>Proofs in classical systems are binary: a proof or not a proof. But partial proofs are informative. They can be reused as heuristics, guiding further search even when they fall short of completeness. A mathematical theory of heuristics — partial proofs as informative objects, not failures — is one of the institute's core research targets.</p>
+      </div>
+
+      <div class="pillar">
+        <span class="pillar-glyph" aria-hidden="true">&#8872;</span>
+        <p class="pillar-label">Pillar II · World Models</p>
+        <h3>Logic as bedrock for how LLMs represent the world</h3>
+        <p>LLMs lack grounded world models. Symbolic ontologies like SUMO exist but are computationally intractable at scale. The institute investigates a different approach: world models that are not fully specified, but governed by <em>admissibility</em>. Rather than asserting what is true, the system specifies what facts are admissible — and only generates the next fact if it passes that test.</p>
+        <p>The insight is structural: just as fixing a grammar produces syntactically valid output, fixing an admissibility relation produces logically valid output. Deductions become a grammar for generation. Hardware-accelerated categorical structures and the formal work of David Pym on deductive and reductive reasoning provide the theoretical scaffolding.</p>
+      </div>
+
+      <div class="pillar">
+        <span class="pillar-glyph" aria-hidden="true">&#9633;</span>
+        <p class="pillar-label">Pillar III · GOFAI is not done</p>
+        <h3>Classical AI, redesigned from first principles</h3>
+        <p>The premise: symbolic AI was not refuted. It was outpaced — and then forgotten. The institute asks whether practitioners would accept Herbrand logic as a practical foundation for modern applications, if the tooling were redesigned for machine consumption. The wager is yes.</p>
+        <p>This means building systems that make explicit what Lean and Agda leave implicit; that treat the binary pass/fail of proof verification as a starting point rather than an endpoint; and that ask, seriously, what GOFAI looks like when its primary user is not a human mathematician but a language model.</p>
+      </div>
+
+      <div class="btn-row">
+        <a class="btn btn-ghost" href="people.html">Meet the people →</a>
+        <a class="btn btn-ghost" href="support.html">Support this work →</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <div class="footer-brand">
+        <a class="footer-logo" href="index.html">Institute of GOFAI</a>
+        <p class="footer-tag">Symbolic methods for the age of neural AI.</p>
+      </div>
+      <ul class="footer-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="people.html">People</a></li>
+        <li><a href="activity.html">Activity</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="support.html">Support</a></li>
+      </ul>
+      <div class="footer-meta">
+        <a href="mailto:institute@gofai.org">institute@gofai.org</a><br />
+        © 2026 Institute of GOFAI
+      </div>
+    </div>
+  </footer>
+
+  <script src="nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog — Institute of GOFAI</title>
+  <meta name="description" content="Essays and working notes from the Institute of GOFAI." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;1,400&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="nav-logo" href="index.html">Institute of GOFAI</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6" /><line x1="3" y1="12" x2="21" y2="12" /><line x1="3" y1="18" x2="21" y2="18" />
+        </svg>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="people.html">People</a></li>
+        <li><a href="activity.html">Activity</a></li>
+        <li><a href="blog.html" aria-current="page">Blog</a></li>
+        <li><a href="support.html">Support</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="page-head">
+    <div class="wrap">
+      <p class="eyebrow">Blog</p>
+      <h1>From the institute</h1>
+      <p class="lede">Essays and working notes on logic, proof, and machine-oriented AI.</p>
+    </div>
+  </header>
+
+  <section>
+    <div class="wrap">
+      <div class="post">
+        <span class="date">June 2026</span>
+        <p class="title">Partial Proofs as Heuristics: A Mathematical Framework</p>
+        <p class="abstract">Classical proof theory treats incomplete proofs as failures. We argue they are informative objects that can guide further reasoning — and sketch what a formal theory of proof heuristics would require.</p>
+        <a class="read" href="#">Read →</a>
+      </div>
+
+      <div class="post">
+        <span class="date">May 2026</span>
+        <p class="title">Would You Accept Herbrand Logic as a Foundation?</p>
+        <p class="abstract">Herbrand's theorem is one of the most powerful results in classical logic, and almost entirely absent from modern AI tooling. We ask why — and what changes if it isn't.</p>
+        <a class="read" href="#">Read →</a>
+      </div>
+
+      <div class="post">
+        <span class="date">April 2026</span>
+        <p class="title">Admissibility over Specification: A New Approach to LLM World Models</p>
+        <p class="abstract">Rather than specifying what an LLM's world model should contain, we propose specifying what it may contain. The shift from truth to admissibility opens a tractable path to logically grounded generation.</p>
+        <a class="read" href="#">Read →</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <div class="footer-brand">
+        <a class="footer-logo" href="index.html">Institute of GOFAI</a>
+        <p class="footer-tag">Symbolic methods for the age of neural AI.</p>
+      </div>
+      <ul class="footer-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="people.html">People</a></li>
+        <li><a href="activity.html">Activity</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="support.html">Support</a></li>
+      </ul>
+      <div class="footer-meta">
+        <a href="mailto:institute@gofai.org">institute@gofai.org</a><br />
+        © 2026 Institute of GOFAI
+      </div>
+    </div>
+  </footer>
+
+  <script src="nav.js"></script>
+</body>
+</html>

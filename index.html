@@ -5,381 +5,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Institute of GOFAI — Symbolic methods for the age of neural AI</title>
   <meta name="description" content="The Institute of GOFAI develops machine-oriented symbolic methods — proof theory, formal logic, and the engineering of trustworthy AI." />
-
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;1,400&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-
-  <style>
-    :root {
-      --bg:          #EEF4FA;
-      --bg-section:  #E6EFF7;
-      --surface:     #F7FAFE;
-      --ink:         #1A2433;
-      --ink-mid:     #3D5166;
-      --ink-light:   #7A94A8;
-      --accent:      #2A6DB5;
-      --accent-soft: #D0E4F5;
-      --rule:        #C8D9E8;
-    }
-
-    *, *::before, *::after { box-sizing: border-box; }
-
-    html {
-      scroll-behavior: smooth;
-      -webkit-text-size-adjust: 100%;
-    }
-
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--ink);
-      font-family: 'Inter', sans-serif;
-      font-weight: 400;
-      font-size: 1.05rem;
-      line-height: 1.85;
-      -webkit-font-smoothing: antialiased;
-      text-rendering: optimizeLegibility;
-    }
-
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-
-    .wrap {
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 0 2rem;
-    }
-
-    /* ---------- Navigation ---------- */
-    .nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
-      background: var(--surface);
-      -webkit-backdrop-filter: blur(12px);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--rule);
-    }
-    .nav-inner {
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 0.9rem 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .nav-logo {
-      font-family: 'EB Garamond', serif;
-      font-size: 1.25rem;
-      color: var(--ink);
-      white-space: nowrap;
-    }
-    .nav-logo:hover { text-decoration: none; }
-    .nav-links {
-      display: flex;
-      gap: 1.5rem;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-    .nav-links a {
-      font-size: 0.85rem;
-      color: var(--ink-mid);
-    }
-    .nav-links a:hover { color: var(--accent); text-decoration: none; }
-    .nav-toggle {
-      display: none;
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 0.4rem;
-      color: var(--ink);
-    }
-    .nav-toggle svg { display: block; }
-
-    /* ---------- Sections ---------- */
-    section { padding: 6rem 0; }
-    .sec-alt { background: var(--bg-section); }
-
-    .eyebrow {
-      font-size: 0.82rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--ink-light);
-      margin: 0 0 1.2rem;
-    }
-
-    h2 {
-      font-family: 'EB Garamond', serif;
-      font-weight: 400;
-      font-size: 1.9rem;
-      line-height: 1.25;
-      margin: 0 0 2.2rem;
-      color: var(--ink);
-    }
-
-    h3 {
-      font-size: 1.1rem;
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin: 0 0 1rem;
-      color: var(--ink);
-    }
-
-    p { margin: 0 0 1.3rem; }
-    .meta {
-      font-size: 0.82rem;
-      color: var(--ink-light);
-    }
-
-    /* ---------- Buttons ---------- */
-    .btn-row { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2.4rem; }
-    .btn {
-      display: inline-block;
-      font-family: 'Inter', sans-serif;
-      font-size: 0.9rem;
-      font-weight: 500;
-      padding: 0.7rem 1.4rem;
-      border-radius: 6px;
-      border: 1px solid var(--accent);
-      transition: background-color 0.2s ease, color 0.2s ease;
-    }
-    .btn:hover { text-decoration: none; }
-    .btn-primary { background: var(--accent); color: #fff; }
-    .btn-primary:hover { background: #225a96; }
-    .btn-ghost { background: transparent; color: var(--accent); }
-    .btn-ghost:hover { background: var(--accent-soft); }
-
-    /* ---------- Hero ---------- */
-    .hero { padding-top: 11rem; }
-    .hero h1 {
-      font-family: 'EB Garamond', serif;
-      font-style: italic;
-      font-weight: 400;
-      font-size: clamp(2.6rem, 5vw, 4.2rem);
-      line-height: 1.1;
-      margin: 0 0 1.8rem;
-      color: var(--ink);
-    }
-    .hero .subhead {
-      font-size: 1.15rem;
-      color: var(--ink-mid);
-      max-width: 560px;
-      margin: 0;
-    }
-
-    /* ---------- Mission ---------- */
-    .mission { text-align: center; }
-    .mission .prose {
-      max-width: 640px;
-      margin: 0 auto;
-      color: var(--ink-mid);
-    }
-    .mission .prose p:last-child { margin-bottom: 0; }
-
-    /* ---------- Research pillars ---------- */
-    .pillar {
-      position: relative;
-      overflow: hidden;
-      padding: 2.6rem 0;
-      border-top: 1px solid var(--rule);
-    }
-    .pillar:last-of-type { border-bottom: 1px solid var(--rule); }
-    .pillar-glyph {
-      position: absolute;
-      top: -1.4rem;
-      right: -0.6rem;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 7rem;
-      line-height: 1;
-      color: var(--accent-soft);
-      pointer-events: none;
-      user-select: none;
-      z-index: 0;
-    }
-    .pillar-label {
-      position: relative;
-      z-index: 1;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.78rem;
-      letter-spacing: 0.06em;
-      color: var(--ink-light);
-      margin: 0 0 0.8rem;
-    }
-    .pillar h3, .pillar p { position: relative; z-index: 1; }
-    .pillar h3 {
-      font-family: 'EB Garamond', serif;
-      font-style: italic;
-      font-weight: 400;
-      font-size: 1.45rem;
-      letter-spacing: 0;
-      text-transform: none;
-      margin: 0 0 1.2rem;
-      max-width: 90%;
-    }
-    .pillar p { color: var(--ink-mid); }
-    .pillar p:last-child { margin-bottom: 0; }
-
-    /* ---------- People ---------- */
-    .person {
-      padding: 1.8rem 0;
-      border-top: 1px solid var(--rule);
-    }
-    .person:last-child { border-bottom: 1px solid var(--rule); }
-    .person .name {
-      font-family: 'EB Garamond', serif;
-      font-size: 1.35rem;
-      color: var(--ink);
-      margin: 0 0 0.3rem;
-    }
-    .person .role { font-size: 0.9rem; color: var(--ink-mid); margin: 0 0 0.5rem; }
-    .person .interest { font-size: 0.95rem; color: var(--ink-mid); margin: 0 0 0.4rem; }
-    .person .site { font-size: 0.82rem; }
-    .person .site span { color: var(--ink-light); }
-
-    /* ---------- Activity ---------- */
-    .activity-list { list-style: none; margin: 0; padding: 0; }
-    .activity-list li {
-      padding: 1.4rem 0;
-      border-top: 1px solid var(--rule);
-    }
-    .activity-list li:last-child { border-bottom: 1px solid var(--rule); }
-    .activity-label {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.74rem;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--accent);
-      display: block;
-      margin-bottom: 0.4rem;
-    }
-    .activity-list .body { color: var(--ink-mid); font-size: 0.98rem; }
-    .activity-list strong { color: var(--ink); font-weight: 500; }
-
-    /* ---------- Blog ---------- */
-    .post {
-      padding: 1.8rem 0;
-      border-top: 1px solid var(--rule);
-    }
-    .post:last-of-type { border-bottom: 1px solid var(--rule); }
-    .post .date {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.74rem;
-      letter-spacing: 0.05em;
-      color: var(--ink-light);
-      display: block;
-      margin-bottom: 0.5rem;
-    }
-    .post .title {
-      font-family: 'EB Garamond', serif;
-      font-size: 1.3rem;
-      color: var(--ink);
-      margin: 0 0 0.7rem;
-    }
-    .post .abstract { color: var(--ink-mid); font-size: 0.98rem; margin: 0 0 0.7rem; }
-    .post .read { font-size: 0.85rem; font-weight: 500; }
-
-    /* ---------- Support ---------- */
-    .support .prose { color: var(--ink-mid); }
-
-    /* ---------- Footer ---------- */
-    footer {
-      background: var(--surface);
-      border-top: 1px solid var(--rule);
-      padding: 3.5rem 0;
-    }
-    .footer-inner {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      align-items: flex-start;
-      justify-content: space-between;
-    }
-    .footer-brand .footer-logo {
-      font-family: 'EB Garamond', serif;
-      font-size: 1.2rem;
-      color: var(--ink);
-    }
-    .footer-brand .footer-tag {
-      font-style: italic;
-      font-family: 'EB Garamond', serif;
-      font-size: 0.95rem;
-      color: var(--ink-light);
-      margin: 0.3rem 0 0;
-    }
-    .footer-nav { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 1.1rem; }
-    .footer-nav a { font-size: 0.85rem; color: var(--ink-mid); }
-    .footer-meta { font-size: 0.82rem; color: var(--ink-light); text-align: right; }
-    .footer-meta a { color: var(--ink-mid); }
-
-    /* ---------- Responsive ---------- */
-    @media (max-width: 768px) {
-      .nav-toggle { display: inline-flex; }
-      .nav-links {
-        position: absolute;
-        top: 100%; left: 0; right: 0;
-        flex-direction: column;
-        gap: 0;
-        background: var(--surface);
-        border-bottom: 1px solid var(--rule);
-        padding: 0.5rem 0;
-        display: none;
-      }
-      .nav-links.open { display: flex; }
-      .nav-links li { padding: 0; }
-      .nav-links a { display: block; padding: 0.7rem 2rem; }
-      .hero { padding-top: 9rem; }
-      section { padding: 4.5rem 0; }
-      .footer-inner { flex-direction: column; }
-      .footer-meta { text-align: left; }
-      .pillar-glyph { font-size: 5rem; }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      * { transition: none !important; }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- ================= NAV ================= -->
   <nav class="nav">
     <div class="nav-inner">
-      <a class="nav-logo" href="#home">Institute of GOFAI</a>
+      <a class="nav-logo" href="index.html">Institute of GOFAI</a>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
           <line x1="3" y1="6" x2="21" y2="6" /><line x1="3" y1="12" x2="21" y2="12" /><line x1="3" y1="18" x2="21" y2="18" />
         </svg>
       </button>
       <ul class="nav-links" id="navLinks">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#research">Research</a></li>
-        <li><a href="#people">People</a></li>
-        <li><a href="#activity">Activity</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#support">Support</a></li>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="people.html">People</a></li>
+        <li><a href="activity.html">Activity</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="support.html">Support</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- ================= HERO ================= -->
+  <!-- HERO -->
   <section class="hero" id="home">
     <div class="wrap">
       <p class="eyebrow">Institute of GOFAI</p>
       <h1>Symbolic AI, reimagined<br />for machines — not humans.</h1>
       <p class="subhead">Modern AI gets stuck. Classical logic can give it a hint — if we redesign the tools from the ground up.</p>
       <div class="btn-row">
-        <a class="btn btn-primary" href="#research">Our Research →</a>
-        <a class="btn btn-ghost" href="#support">Support the Institute</a>
+        <a class="btn btn-primary" href="research.html">Our Research →</a>
+        <a class="btn btn-ghost" href="support.html">Support the Institute</a>
       </div>
     </div>
   </section>
 
-  <!-- ================= MISSION ================= -->
+  <!-- MISSION -->
   <section class="mission sec-alt">
     <div class="wrap">
       <div class="prose">
@@ -389,8 +54,8 @@
     </div>
   </section>
 
-  <!-- ================= RESEARCH ================= -->
-  <section class="research" id="research">
+  <!-- RESEARCH TEASER -->
+  <section class="research">
     <div class="wrap">
       <p class="eyebrow">Research</p>
       <h2>Three pillars of a machine-oriented programme</h2>
@@ -399,152 +64,68 @@
         <span class="pillar-glyph" aria-hidden="true">&#8866;</span>
         <p class="pillar-label">Pillar I · Constraining · Boosting · Auditing</p>
         <h3>Symbolic checks on neural systems</h3>
-        <p>New-fashioned AI should be auditable by symbolic means. The central question is how to design interactive theorem provers (ITPs) that are LLM-friendly — and, more radically, what ITPs look like when they are designed for machines rather than for humans. Current tools such as Lean and Agda make many things implicit that could be made explicit; unlike human mathematicians, LLMs prefer explicitness, as any prompt engineer knows.</p>
-        <p>Proofs in classical systems are binary: a proof or not a proof. But partial proofs are informative. They can be reused as heuristics, guiding further search even when they fall short of completeness. A mathematical theory of heuristics — partial proofs as informative objects, not failures — is one of the institute's core research targets.</p>
+        <p>Interactive theorem provers redesigned for machines, and a mathematical theory of heuristics in which partial proofs are informative objects rather than failures.</p>
       </div>
 
       <div class="pillar">
         <span class="pillar-glyph" aria-hidden="true">&#8872;</span>
         <p class="pillar-label">Pillar II · World Models</p>
         <h3>Logic as bedrock for how LLMs represent the world</h3>
-        <p>LLMs lack grounded world models. Symbolic ontologies like SUMO exist but are computationally intractable at scale. The institute investigates a different approach: world models that are not fully specified, but governed by <em>admissibility</em>. Rather than asserting what is true, the system specifies what facts are admissible — and only generates the next fact if it passes that test.</p>
-        <p>The insight is structural: just as fixing a grammar produces syntactically valid output, fixing an admissibility relation produces logically valid output. Deductions become a grammar for generation. Hardware-accelerated categorical structures and the formal work of David Pym on deductive and reductive reasoning provide the theoretical scaffolding.</p>
+        <p>World models governed not by specification but by <em>admissibility</em> — turning deduction into a grammar for logically valid generation.</p>
       </div>
 
       <div class="pillar">
         <span class="pillar-glyph" aria-hidden="true">&#9633;</span>
         <p class="pillar-label">Pillar III · GOFAI is not done</p>
         <h3>Classical AI, redesigned from first principles</h3>
-        <p>The premise: symbolic AI was not refuted. It was outpaced — and then forgotten. The institute asks whether practitioners would accept Herbrand logic as a practical foundation for modern applications, if the tooling were redesigned for machine consumption. The wager is yes.</p>
-        <p>This means building systems that make explicit what Lean and Agda leave implicit; that treat the binary pass/fail of proof verification as a starting point rather than an endpoint; and that ask, seriously, what GOFAI looks like when its primary user is not a human mathematician but a language model.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= PEOPLE ================= -->
-  <section class="people sec-alt" id="people">
-    <div class="wrap">
-      <p class="eyebrow">People</p>
-      <h2>The people behind the institute</h2>
-
-      <div class="person">
-        <p class="name">Alexander V. Gheorghiu</p>
-        <p class="role">New Frontiers Fellow, University of Southampton · Honorary Research Fellow, UCL</p>
-        <p class="interest">Proof-theoretic semantics, philosophy of logic, logic and AI</p>
-        <p class="site"><a href="https://alexandergheorghiu.com">alexandergheorghiu.com</a></p>
+        <p>Symbolic AI was not refuted — it was outpaced and forgotten. We ask what GOFAI becomes when its primary user is a language model, not a human mathematician.</p>
       </div>
 
-      <div class="person">
-        <p class="name">Michael Rawson</p>
-        <p class="role">Researcher, University of Southampton</p>
-        <p class="interest">Automated reasoning, theorem proving, machine learning and logic</p>
-        <p class="site"><a href="https://rawsons.uk/michael">rawsons.uk/michael</a></p>
-      </div>
-
-      <!-- TODO: replace placeholder with real person (name / role / institution / interests / site) -->
-      <div class="person">
-        <p class="name">[Name]</p>
-        <p class="role">[Role, Institution]</p>
-        <p class="interest">[Research interests]</p>
-        <p class="site"><span>—</span></p>
-      </div>
-
-      <!-- TODO: replace placeholder with real person (name / role / institution / interests / site) -->
-      <div class="person">
-        <p class="name">[Name]</p>
-        <p class="role">[Role, Institution]</p>
-        <p class="interest">[Research interests]</p>
-        <p class="site"><span>—</span></p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= ACTIVITY ================= -->
-  <section class="activity" id="activity">
-    <div class="wrap">
-      <p class="eyebrow">Activity</p>
-      <h2>Current activity</h2>
-
-      <ul class="activity-list">
-        <li>
-          <span class="activity-label">Reading group</span>
-          <span class="body"><strong>Heuristic proof search and partial proofs.</strong> Fortnightly, online. Open to researchers. <a href="#support">Contact to join →</a></span>
-        </li>
-        <li>
-          <span class="activity-label">Workshop</span>
-          <span class="body"><strong>Admissibility and World Models.</strong> Date TBC, University of Southampton.</span>
-        </li>
-        <li>
-          <span class="activity-label">Preprint</span>
-          <span class="body"><strong><em>Towards Machine-Oriented Interactive Theorem Proving.</em></strong> In preparation.</span>
-        </li>
-        <li>
-          <span class="activity-label">Seminar series</span>
-          <span class="body"><strong>GOFAI for LLMs: a working programme.</strong> First session autumn 2026.</span>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- ================= BLOG ================= -->
-  <section class="blog sec-alt" id="blog">
-    <div class="wrap">
-      <p class="eyebrow">Blog</p>
-      <h2>From the institute</h2>
-
-      <div class="post">
-        <span class="date">June 2026</span>
-        <p class="title">Partial Proofs as Heuristics: A Mathematical Framework</p>
-        <p class="abstract">Classical proof theory treats incomplete proofs as failures. We argue they are informative objects that can guide further reasoning — and sketch what a formal theory of proof heuristics would require.</p>
-        <a class="read" href="#">Read →</a>
-      </div>
-
-      <div class="post">
-        <span class="date">May 2026</span>
-        <p class="title">Would You Accept Herbrand Logic as a Foundation?</p>
-        <p class="abstract">Herbrand's theorem is one of the most powerful results in classical logic, and almost entirely absent from modern AI tooling. We ask why — and what changes if it isn't.</p>
-        <a class="read" href="#">Read →</a>
-      </div>
-
-      <div class="post">
-        <span class="date">April 2026</span>
-        <p class="title">Admissibility over Specification: A New Approach to LLM World Models</p>
-        <p class="abstract">Rather than specifying what an LLM's world model should contain, we propose specifying what it may contain. The shift from truth to admissibility opens a tractable path to logically grounded generation.</p>
-        <a class="read" href="#">Read →</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= SUPPORT ================= -->
-  <section class="support" id="support">
-    <div class="wrap">
-      <p class="eyebrow">Support</p>
-      <h2>Support the Institute</h2>
-      <div class="prose">
-        <p>The Institute of GOFAI is an independent research body. We welcome research partnerships, collaborative grants, and philanthropic support from organisations and individuals who believe that rigorous symbolic methods have an essential role in building AI that is interpretable, trustworthy, and genuinely useful.</p>
-        <p>Funding enables: research fellowships, a visiting programme, workshop organisation, and the development of open tools for machine-oriented formal reasoning.</p>
-        <p>Enquiries: <a href="mailto:institute@gofai.org">institute@gofai.org</a> <span class="meta">(placeholder — replace with real address)</span></p>
-      </div>
       <div class="btn-row">
-        <a class="btn btn-primary" href="mailto:institute@gofai.org">Get in Touch</a>
+        <a class="btn btn-ghost" href="research.html">Read the research →</a>
       </div>
     </div>
   </section>
 
-  <!-- ================= FOOTER ================= -->
+  <!-- EXPLORE -->
+  <section class="explore sec-alt">
+    <div class="wrap">
+      <p class="eyebrow">Explore</p>
+      <h2>Across the institute</h2>
+      <div class="explore-list">
+        <a class="explore-item" href="people.html">
+          <span class="explore-name">People <span class="arrow">→</span></span>
+          <p class="explore-desc">The researchers behind the institute and their interests.</p>
+        </a>
+        <a class="explore-item" href="activity.html">
+          <span class="explore-name">Activity <span class="arrow">→</span></span>
+          <p class="explore-desc">Reading groups, workshops, preprints, and the seminar series.</p>
+        </a>
+        <a class="explore-item" href="blog.html">
+          <span class="explore-name">Blog <span class="arrow">→</span></span>
+          <p class="explore-desc">Essays and working notes from the institute.</p>
+        </a>
+        <a class="explore-item" href="support.html">
+          <span class="explore-name">Support <span class="arrow">→</span></span>
+          <p class="explore-desc">Partnerships, grants, and philanthropic support.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <footer>
     <div class="wrap footer-inner">
       <div class="footer-brand">
-        <a class="footer-logo" href="#home">Institute of GOFAI</a>
+        <a class="footer-logo" href="index.html">Institute of GOFAI</a>
         <p class="footer-tag">Symbolic methods for the age of neural AI.</p>
       </div>
       <ul class="footer-nav">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#research">Research</a></li>
-        <li><a href="#people">People</a></li>
-        <li><a href="#activity">Activity</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#support">Support</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="people.html">People</a></li>
+        <li><a href="activity.html">Activity</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="support.html">Support</a></li>
       </ul>
       <div class="footer-meta">
         <a href="mailto:institute@gofai.org">institute@gofai.org</a><br />
@@ -553,22 +134,6 @@
     </div>
   </footer>
 
-  <script>
-    (function () {
-      var toggle = document.getElementById('navToggle');
-      var links = document.getElementById('navLinks');
-      toggle.addEventListener('click', function () {
-        var open = links.classList.toggle('open');
-        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-      });
-      // Close the mobile menu after following an in-page link
-      links.addEventListener('click', function (e) {
-        if (e.target.tagName === 'A') {
-          links.classList.remove('open');
-          toggle.setAttribute('aria-expanded', 'false');
-        }
-      });
-    })();
-  </script>
+  <script src="nav.js"></script>
 </body>
 </html>
