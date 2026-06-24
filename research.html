@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Research — Institute of GOFAI</title>
-  <meta name="description" content="Three research pillars: symbolic checks on neural systems, logic as bedrock for LLM world models, and classical AI redesigned from first principles." />
+  <meta name="description" content="The Institute of GOFAI's mission in three pillars: symbolic checks on neural systems, logic as a bedrock for LLM world models, and continuing classical AI for machines. Trustworthy AI (TAI), Responsible AI (RAI), and Explainable AI (XAI) through logic." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -32,36 +32,64 @@
 
   <header class="page-head">
     <div class="wrap">
-      <p class="eyebrow">Research</p>
+      <p class="eyebrow">Mission &amp; manifesto</p>
       <h1>Three pillars of a machine-oriented programme</h1>
-      <p class="lede">What symbolic methods look like when they are designed for machine consumption rather than human readability.</p>
+      <p class="lede">These three pillars are the institute's mission — a manifesto for what symbolic methods can be when they are designed for machine consumption rather than human readability.</p>
     </div>
   </header>
 
   <section>
     <div class="wrap">
+      <div class="prose">
+        <p>Trustworthy AI (TAI), Responsible AI (RAI), and Explainable AI (XAI) set the scene. We are wary of the labels — but the concern behind them is real, and we think logic, not a compliance layer bolted on at the end, is where the answer lies.</p>
+      </div>
+
       <div class="pillar">
         <span class="pillar-glyph" aria-hidden="true">&#8866;</span>
         <p class="pillar-label">Pillar I · Constraining · Boosting · Auditing</p>
         <h3>Symbolic checks on neural systems</h3>
-        <p>New-fashioned AI should be auditable by symbolic means. The central question is how to design interactive theorem provers (ITPs) that are LLM-friendly — and, more radically, what ITPs look like when they are designed for machines rather than for humans. Current tools such as Lean and Agda make many things implicit that could be made explicit; unlike human mathematicians, LLMs prefer explicitness, as any prompt engineer knows.</p>
-        <p>Proofs in classical systems are binary: a proof or not a proof. But partial proofs are informative. They can be reused as heuristics, guiding further search even when they fall short of completeness. A mathematical theory of heuristics — partial proofs as informative objects, not failures — is one of the institute's core research targets.</p>
+        <p>New-fashioned AI should be checkable — and, where possible, checked — by symbolic means: methods that constrain a model's output, boost its reasoning, and audit its results. Interactive theorem provers (ITPs) are the natural instrument, but tools like Lean and Agda were built for human mathematicians and leave a great deal implicit that could be made explicit. LLMs are not human; as any prompt engineer will attest, they do better when things are spelled out. A second thread concerns proof search itself: a classical proof either is or is not a proof, yet incomplete proofs are often informative. A mathematical theory of heuristics would let partial proofs be reused as guidance — a way to read the state of play even when no complete proof is in hand.</p>
+        <div class="rqs">
+          <p class="rqs-label">Research questions</p>
+          <ul>
+            <li>How can interactive theorem provers be designed to be LLM-friendly?</li>
+            <li>What does an ITP look like when designed for machines — making explicit what Lean and Agda leave implicit?</li>
+            <li>Can partial proofs be given rigorous status as heuristics that guide further search rather than count as failures?</li>
+            <li>How do we turn a stuck or partial proof into actionable guidance for a neural system?</li>
+          </ul>
+        </div>
       </div>
 
       <div class="pillar">
         <span class="pillar-glyph" aria-hidden="true">&#8872;</span>
         <p class="pillar-label">Pillar II · World Models</p>
-        <h3>Logic as bedrock for how LLMs represent the world</h3>
-        <p>LLMs lack grounded world models. Symbolic ontologies like SUMO exist but are computationally intractable at scale. The institute investigates a different approach: world models that are not fully specified, but governed by <em>admissibility</em>. Rather than asserting what is true, the system specifies what facts are admissible — and only generates the next fact if it passes that test.</p>
-        <p>The insight is structural: just as fixing a grammar produces syntactically valid output, fixing an admissibility relation produces logically valid output. Deductions become a grammar for generation. Hardware-accelerated categorical structures and the formal work of David Pym on deductive and reductive reasoning provide the theoretical scaffolding.</p>
+        <h3>Logic as a bedrock for world models</h3>
+        <p>LLMs need a picture of the world. Hand-built ontologies such as SUMO supply one, but they are inefficient and do not scale. We pursue world models built with traditional logical techniques yet deliberately left <em>not</em> fully specified — governed instead by a notion of <em>admissibility</em>. The analogy is grammar: an LLM's output is already passed through a grammar checker to ensure it is well-formed, so why not a logic checker that emits the next fact only when it is admissible? Just as fixing a grammar produces syntactically valid output, fixing an admissibility relation produces logically valid output.</p>
+        <div class="rqs">
+          <p class="rqs-label">Research questions</p>
+          <ul>
+            <li>What is the right notion of admissibility for a world model that is not fully specified?</li>
+            <li>Could a logic checker sit beside the grammar checker, admitting only logically valid next facts?</li>
+            <li>How do we capture the coverage of ontologies like SUMO without their intractability?</li>
+            <li>Which classical techniques transfer to specifying world models by admissibility rather than enumeration?</li>
+          </ul>
+        </div>
       </div>
 
       <div class="pillar">
         <span class="pillar-glyph" aria-hidden="true">&#9633;</span>
-        <p class="pillar-label">Pillar III · GOFAI still works</p>
-        <h3>Classical AI, continued — not reinvented</h3>
-        <p>The premise: symbolic AI was never refuted. Within its remit — exact, inspectable, provably correct reasoning — it remains exceptionally good at precisely what it was designed to do. It was not surpassed so much as set aside while attention moved elsewhere. The institute's wager is that these methods deserve to be continued, not replaced.</p>
-        <p>Continuing GOFAI means taking its strengths seriously and carrying them forward: applying mature classical results — Herbrand logic among them — to modern problems, and meeting today's practitioners and language models where they are, without discarding the guarantees that made the tradition valuable in the first place.</p>
+        <p class="pillar-label">Pillar III · GOFAI is not done</p>
+        <h3>Classical AI, continued — and built for machines</h3>
+        <p>Symbolic AI was never refuted; within its remit it does exactly what it was built to do — and it is not finished. Continuing it means two things: taking mature classical results seriously as foundations for real applications, and redesigning the tooling for machine users rather than human ones. Where today's automated tools get stuck, the aim is to give them a hint, not to start over. A particular target is a mature theory of reductive logic — reasoning backwards from goals — to stand alongside the deductive tradition.</p>
+        <div class="rqs">
+          <p class="rqs-label">Research questions</p>
+          <ul>
+            <li>Would practitioners accept Herbrand logic as a practical basis for applications?</li>
+            <li>When automated tools get stuck, how can we give them a productive hint?</li>
+            <li>What does GOFAI look like redesigned for LLM use rather than human use?</li>
+            <li>Can we develop a mature theory of reductive — rather than deductive — logic?</li>
+          </ul>
+        </div>
       </div>
 
       <div class="btn-row">

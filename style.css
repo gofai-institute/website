@@ -270,6 +270,38 @@ p { margin: 0 0 1.3rem; }
 }
 .pillar p { color: var(--ink-mid); }
 .pillar p:last-child { margin-bottom: 0; }
+.rqs {
+  position: relative;
+  z-index: 1;
+  margin-top: 1.6rem;
+}
+.rqs-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-light);
+  margin: 0 0 0.7rem;
+}
+.rqs ul { list-style: none; margin: 0; padding: 0; }
+.rqs li {
+  position: relative;
+  padding-left: 1.6rem;
+  margin-bottom: 0.6rem;
+  color: var(--ink);
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+.rqs li:last-child { margin-bottom: 0; }
+.rqs li::before {
+  content: "?";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+  color: var(--accent);
+}
 
 /* ---------- People ---------- */
 .person {
