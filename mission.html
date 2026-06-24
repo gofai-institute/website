@@ -67,21 +67,21 @@
     <div class="wrap">
       <p class="eyebrow">Mission &amp; manifesto</p>
       <h1>Three pillars of a machine-oriented programme</h1>
-      <p class="lede">These three pillars are the institute's mission — a manifesto for what symbolic methods can be when they are designed for machine consumption rather than human readability.</p>
+      <p class="lede">These three pillars are our mission — and our manifesto for what symbolic methods can be when they are built for machines to use, not people to read.</p>
     </div>
   </header>
 
   <section>
     <div class="wrap">
       <div class="prose">
-        <p>Trustworthy AI (TAI), Responsible AI (RAI), and Explainable AI (XAI) set the scene. We are wary of the labels — but the concern behind them is real, and we think <strong>logic</strong>, not a compliance layer bolted on at the end, is where the answer lies.</p>
+        <p>Trustworthy AI (TAI), Responsible AI (RAI), and Explainable AI (XAI) set the scene. We are wary of the labels — but the worry behind them is real, and we think the answer is <strong>logic</strong>, not a layer of compliance bolted on at the end.</p>
       </div>
 
       <div class="pillar">
         <span class="pillar-glyph" aria-hidden="true">&#8866;</span>
         <p class="pillar-label">Pillar I · Constraining · Boosting · Auditing</p>
         <h3>Symbolic checks on neural systems</h3>
-        <p>New-fashioned AI should be checkable — and, where possible, checked — by symbolic means: methods that <strong>constrain</strong> a model's output, <strong>boost</strong> its reasoning, and <strong>audit</strong> its results. <strong>Interactive theorem provers (ITPs)</strong> are the natural instrument, but tools like Lean and Agda were built for human mathematicians and leave a great deal implicit that could be made explicit. LLMs are not human; as any prompt engineer will attest, they do better when things are spelled out. A second thread concerns proof search itself: a classical proof either is or is not a proof, yet incomplete proofs are often informative. A mathematical <strong>theory of heuristics</strong> would let partial proofs be reused as guidance — a way to read the state of play even when no complete proof is in hand.</p>
+        <p>Today's AI should be open to checking by symbolic means — methods that <strong>constrain</strong> what a model can output, <strong>boost</strong> its reasoning, and <strong>audit</strong> its results. The natural tool is the <strong>interactive theorem prover (ITP)</strong>: software that checks a proof step by step. But the leading systems, such as Lean and Agda, were built for human mathematicians, and leave much unsaid that could be made explicit. Large language models are not human, and — as any prompt engineer knows — they do better when everything is spelled out. A second thread is about proof search. In classical logic a proof either works or it does not, yet a half-finished proof can still be informative. A mathematical <strong>theory of heuristics</strong> would let these partial proofs be reused as guidance — a way to see where things stand even when no complete proof is in hand.</p>
         <div class="rqs">
           <p class="rqs-label">Research questions</p>
           <ul>
@@ -97,7 +97,7 @@
         <span class="pillar-glyph" aria-hidden="true">&#8872;</span>
         <p class="pillar-label">Pillar II · World Models</p>
         <h3>Logic as a bedrock for world models</h3>
-        <p>LLMs need a picture of the world. Hand-built ontologies such as <strong>SUMO</strong> supply one, but they are inefficient and do not scale. We pursue world models built with traditional logical techniques yet deliberately left <em>not</em> fully specified — governed instead by a notion of <em>admissibility</em>. The analogy is grammar: an LLM's output is already passed through a grammar checker to ensure it is well-formed, so why not a <strong>logic checker</strong> that emits the next fact only when it is admissible? Just as fixing a grammar produces syntactically valid output, fixing an admissibility relation produces <strong>logically valid output</strong>.</p>
+        <p>A language model needs some picture of the world. Hand-built knowledge bases such as <strong>SUMO</strong> offer one, but they are slow and do not scale. We take a different route: world models built with traditional logical techniques but left deliberately <em>open</em> rather than fully pinned down — governed instead by what we call <em>admissibility</em>. Think of grammar. A model's output is already run through a grammar checker to make sure it is well formed; why not add a <strong>logic checker</strong> that allows the next fact only when it is admissible? Fixing a grammar gives you output that is grammatically valid; fixing a rule of admissibility gives you output that is <strong>logically valid</strong>.</p>
         <div class="rqs">
           <p class="rqs-label">Research questions</p>
           <ul>
@@ -113,7 +113,7 @@
         <span class="pillar-glyph" aria-hidden="true">&#9633;</span>
         <p class="pillar-label">Pillar III · GOFAI is not done</p>
         <h3>Classical AI, continued — and built for machines</h3>
-        <p>Symbolic AI was <strong>never refuted</strong>; within its remit it does exactly what it was built to do — and it is not finished. Continuing it means two things: taking mature classical results seriously as foundations for real applications, and <strong>redesigning the tooling for machine users rather than human ones</strong>. Where today's automated tools get stuck, the aim is to give them a hint, not to start over. A particular target is a mature theory of <strong>reductive logic</strong> — reasoning backwards from goals — to stand alongside the deductive tradition.</p>
+        <p>Symbolic AI was <strong>never refuted</strong>. Within the job it was built for it works exactly as intended — and that job is far from finished. Continuing it means two things: treating well-established classical results as real foundations for applications, and <strong>rebuilding the tools for machines to use rather than people</strong>. When today's automated tools get stuck, our aim is to give them a hint, not to start from scratch. One specific goal is a mature theory of <strong>reductive logic</strong> — working backwards from a goal to the steps that would establish it — to sit alongside the usual forward, deductive style.</p>
         <div class="rqs">
           <p class="rqs-label">Research questions</p>
           <ul>
