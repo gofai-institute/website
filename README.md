@@ -13,15 +13,27 @@ no frameworks, no npm. The only external resources are Google Fonts (EB Garamond
 Inter, JetBrains Mono).
 
 - `index.html` — landing page (hero, mission with the three pillars, links out).
-- `research.html` — the three research pillars in full.
+- `mission.html` — the three pillars in full (the institute's mission/manifesto),
+  each with an explanatory paragraph and refined research questions.
 - `people.html` — the people behind the institute (with headshots in `images/`).
 - `blog.html` — placeholder posts (lorem ipsum) until real essays are published.
 - `support.html` — partnerships, grants, contact.
 - `style.css` — shared stylesheet (design tokens live in the `:root` block).
 - `nav.js` — shared mobile-nav toggle.
 - `images/` — headshots and other assets.
+- `favicon.svg` — site icon (the turnstile glyph).
+- `robots.txt`, `sitemap.xml` — SEO crawl directives.
 - `_config.yml` — tells GitHub Pages to serve the raw HTML directly.
 - `README.md` — this file.
+
+### SEO
+
+Each page carries a unique title/description, canonical URL, Open Graph and
+Twitter Card tags, and JSON-LD structured data (Organization + WebSite on the
+landing page; AboutPage on Mission; Person entries on People; Blog/WebPage on
+the rest). **All canonical and `og:url` values point at the current GitHub Pages
+URL (`https://gofai-institute.github.io/website/`)** — update them, plus
+`sitemap.xml` and `robots.txt`, when the site moves to its standalone domain.
 
 ## Local preview
 

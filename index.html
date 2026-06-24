@@ -1,14 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Institute of GOFAI — Symbolic methods for the age of neural AI</title>
   <meta name="description" content="The Institute of GOFAI develops machine-oriented symbolic methods — proof theory, formal logic, and the engineering of trustworthy AI." />
+  <link rel="canonical" href="https://gofai-institute.github.io/website/" />
+  <meta name="author" content="Institute of GOFAI" />
+  <meta name="robots" content="index, follow" />
+  <meta name="keywords" content="GOFAI, symbolic AI, proof theory, interactive theorem provers, automated reasoning, trustworthy AI, explainable AI, Herbrand logic, reductive logic, world models" />
+  <meta name="theme-color" content="#EEF4FA" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Institute of GOFAI" />
+  <meta property="og:locale" content="en_GB" />
+  <meta property="og:title" content="Institute of GOFAI — Symbolic methods for the age of neural AI" />
+  <meta property="og:description" content="An independent research institute developing machine-oriented symbolic methods — proof theory, formal logic, and the engineering of trustworthy AI." />
+  <meta property="og:url" content="https://gofai-institute.github.io/website/" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Institute of GOFAI — Symbolic methods for the age of neural AI" />
+  <meta name="twitter:description" content="An independent research institute developing machine-oriented symbolic methods for trustworthy AI." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": ["Organization", "ResearchOrganization"],
+        "@id": "https://gofai-institute.github.io/website/#organization",
+        "name": "Institute of GOFAI",
+        "alternateName": "GOFAI Institute",
+        "url": "https://gofai-institute.github.io/website/",
+        "logo": "https://gofai-institute.github.io/website/favicon.svg",
+        "description": "An independent research institute developing machine-oriented symbolic methods — proof theory, formal logic, and the engineering of trustworthy AI.",
+        "email": "institute@gofai.org",
+        "sameAs": ["https://github.com/gofai-institute"],
+        "knowsAbout": [
+          "Symbolic artificial intelligence",
+          "GOFAI",
+          "Proof theory",
+          "Automated theorem proving",
+          "Interactive theorem provers",
+          "Formal logic",
+          "Trustworthy AI",
+          "Explainable AI",
+          "Herbrand logic",
+          "Reductive logic"
+        ],
+        "member": [
+          { "@type": "Person", "name": "Alexander V. Gheorghiu", "url": "https://alexandergheorghiu.com" },
+          { "@type": "Person", "name": "Michael Rawson", "url": "https://rawsons.uk/michael" }
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://gofai-institute.github.io/website/#website",
+        "url": "https://gofai-institute.github.io/website/",
+        "name": "Institute of GOFAI",
+        "description": "Symbolic methods for the age of neural AI.",
+        "inLanguage": "en-GB",
+        "publisher": { "@id": "https://gofai-institute.github.io/website/#organization" }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -22,7 +80,7 @@
       </button>
       <ul class="nav-links" id="navLinks">
         <li><a href="index.html" aria-current="page">Home</a></li>
-        <li><a href="research.html">Research</a></li>
+        <li><a href="mission.html">Mission</a></li>
         <li><a href="people.html">People</a></li>
         <li><a href="blog.html">Blog</a></li>
         <li><a href="support.html">Support</a></li>
@@ -38,7 +96,7 @@
       <p class="hero-tagline">Symbolic AI, reimagined for machines — not humans.</p>
       <p class="subhead">Modern AI gets stuck. Classical logic can give it a hint — if we redesign the tools from the ground up.</p>
       <div class="btn-row">
-        <a class="btn btn-primary" href="research.html">Our Research →</a>
+        <a class="btn btn-primary" href="mission.html">Our Mission →</a>
         <a class="btn btn-ghost" href="support.html">Support the Institute</a>
       </div>
     </div>
@@ -50,33 +108,33 @@
       <p class="eyebrow">Mission</p>
       <h2>Logic as the substrate of trustworthy AI</h2>
       <div class="prose">
-        <p>GOFAI — Good Old-Fashioned Artificial Intelligence — was not a dead end. It was abandoned before its potential was understood. The Institute exists to ask what symbolic methods look like when they are designed for machine consumption rather than human readability, and what that makes possible for the trustworthiness of AI.</p>
-        <p>The work sits at the intersection of proof theory, formal logic, and the engineering of intelligent systems. Trustworthy AI (TAI), Responsible AI (RAI), and Explainable AI (XAI) are the context — but logic is not a compliance checkbox to bolt on at the end. It is the substrate. Our mission organises around three pillars.</p>
+        <p>GOFAI — Good Old-Fashioned Artificial Intelligence — was <strong>not a dead end</strong>. It was abandoned before its potential was understood. The Institute exists to ask what symbolic methods look like when they are designed for <strong>machine consumption rather than human readability</strong>, and what that makes possible for the trustworthiness of AI.</p>
+        <p>The work sits at the intersection of proof theory, formal logic, and the engineering of intelligent systems. Trustworthy AI (TAI), Responsible AI (RAI), and Explainable AI (XAI) are the context — but logic is not a compliance checkbox to bolt on at the end. <strong>It is the substrate.</strong> Our mission organises around three pillars.</p>
       </div>
 
       <div class="pillar">
         <span class="pillar-glyph" aria-hidden="true">&#8866;</span>
         <p class="pillar-label">Pillar I · Constraining · Boosting · Auditing</p>
         <h3>Symbolic checks on neural systems</h3>
-        <p>Interactive theorem provers redesigned for machines, and a mathematical theory of heuristics in which partial proofs are informative objects rather than failures.</p>
+        <p><strong>Interactive theorem provers</strong> redesigned for machines, and a mathematical theory of <strong>heuristics</strong> in which partial proofs are informative objects rather than failures.</p>
       </div>
 
       <div class="pillar">
         <span class="pillar-glyph" aria-hidden="true">&#8872;</span>
         <p class="pillar-label">Pillar II · World Models</p>
         <h3>Logic as a bedrock for world models</h3>
-        <p>World models governed not by specification but by <em>admissibility</em> — a logic checker beside the grammar checker, turning deduction into a grammar for logically valid generation.</p>
+        <p>World models governed not by specification but by <em>admissibility</em> — a <strong>logic checker</strong> beside the grammar checker, turning deduction into a grammar for logically valid generation.</p>
       </div>
 
       <div class="pillar">
         <span class="pillar-glyph" aria-hidden="true">&#9633;</span>
         <p class="pillar-label">Pillar III · GOFAI is not done</p>
         <h3>Classical AI, continued — and built for machines</h3>
-        <p>Symbolic AI was never refuted. Within its remit it is exceptionally good at exactly what it was built to do; the task is to continue it — extending mature classical methods to the problems and users of the present.</p>
+        <p>Symbolic AI was <strong>never refuted</strong>. Within its remit it is exceptionally good at exactly what it was built to do; the task is to <strong>continue it</strong> — extending mature classical methods to the problems and users of the present.</p>
       </div>
 
       <div class="btn-row">
-        <a class="btn btn-ghost" href="research.html">Read the research →</a>
+        <a class="btn btn-ghost" href="mission.html">Read the mission →</a>
       </div>
     </div>
   </section>
@@ -111,7 +169,7 @@
       </div>
       <ul class="footer-nav">
         <li><a href="index.html">Home</a></li>
-        <li><a href="research.html">Research</a></li>
+        <li><a href="mission.html">Mission</a></li>
         <li><a href="people.html">People</a></li>
         <li><a href="blog.html">Blog</a></li>
         <li><a href="support.html">Support</a></li>
